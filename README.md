@@ -1,2 +1,2 @@
 # Kimiblock.github.io
-WEB redirect by GitHub Pages
+WEB redirect by GitHub Pages.
