@@ -1,36 +1,7 @@
-<div class="box">
-  <div class="box__ghost">
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    <div class="symbol"></div>
-    
-    <div class="box__ghost-container">
-      <div class="box__ghost-eyes">
-        <div class="box__eye-left"></div>
-        <div class="box__eye-right"></div>
-      </div>
-      <div class="box__ghost-bottom">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div class="box__ghost-shadow"></div>
-  </div>
-  
-  <div class="box__description">
-    <div class="box__description-container">
-      <div class="box__description-title">屑!</div>
-      <div class="box__description-text">我们找不到你所请求的页面,也许试试 kimiblock.github.io/cloud ?</div>
-    </div>
-    
-    <a href="kimiblock.uicp.vip:4000/" target="_blank" class="box__button">回到主页</a>
-    
-  </div>
-  
-</div>
+<script>
+var domain = "kimiblock.uicp.vip:4000";
+var src = window.location.href;
+var prtc = src.substring(0, src.indexOf(':'));
+var target = src.substring(src.indexOf('/', src.indexOf(':') + 3));
+window.location.href = prtc + "://" + domain + target;
+</script>
