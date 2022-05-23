@@ -1,0 +1,169 @@
+---
+title: 浏览前必读
+date: 2022-02-18 22:37:27
+---
+
+
+
+# 域名
+
+**本域名 kimiblock.top 由Kimiblock Zhou 拥有.** 
+
+<u>***与任何人和组织无关, 由Kimiblock个人维护和管理***</u>
+
+# 评论
+
+## 技术支持
+
+本网站采用 Giscus 和 GitHub Discussions 作为评论支持.
+
+由于众所周知的原因, GitHub在国内访问速度稍慢. 评论发布的过程可能长达1分钟. 在发表过程中请勿刷新页面.
+
+## 规范
+
+本网站在非特殊情况下不参与任何包括但不限于
+
+```Deny List
+明星
+227
+饭圈
+电视剧
+明星粉丝
+粪坑
+AO3
+GFW
+```
+
+的讨论
+
+评论区请勿参与关于以上内容的任何讨论, 否则 Kimiblock 有权利删除评论或向 `Github` 举报相关不当言论
+
+# 博客文章版权
+
+本博客所有文章除非特别申明, 均属于 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议, 由 `Kimiblock` 创作
+
+# 显示与亮度
+
+## 深色模式
+
+本网站会根据 `浏览器版本` `设备深色模式状态` 自动启用深色模式
+
+如果设备不支持自动切换，本网站会根据其他条件按需启用深色模式
+
+# 隐私与安全
+
+## 安全
+
+本站点使用Nginx+Https加密, 能够最大限度保证您的浏览安全.
+
+## 隐私
+
+本网站使用Cookies提供自动登录以及设置记忆支持。
+
+本网站收集包括但不限于:
+
+```Data
+设备型号
+
+浏览器内核版本
+
+设备屏幕参数
+```
+
+来改善读者体验
+
+# 兼容性
+
+由于 `Safari` 自身的缺陷, 本站对 `Safari` 的支持可能不完全.
+
+请使用 `Chromium` `Firefox` 访问网站
+
+
+
+# 硬件加速
+
+本站动画效果较多, 使用软件渲染可能导致卡顿, 发热等问题. 推荐启动硬件加速来优化体验.
+
+
+
+## Windows
+
+### Chrome
+
+打开 `chrome://flags`
+
+设定 `canvas-oop-rasterization`为 `True`
+
+## Linux
+
+### X.org
+
+#### Chrome
+
+编辑 `~/.config/chrome-flags.conf`
+
+添加以下内容
+
+```~/.config/chrome-flags.conf
+--ignore-gpu-blocklist
+--enable-gpu-rasterization
+--enable-zero-copy
+--use-gl=desktop
+--enable-features=VaapiVideoDecoder,ParallelDownloading,VaapiVideoEncoder
+--use-vulkan
+--disable-features=UseChromeOSDirectVideoDecoder
+--disable-gpu-driver-bug-workarounds
+--canvas-oop-rasterization
+```
+
+### Firefox
+
+编辑 `/usr/share/Applications/firefox.desktop`
+
+全局替换 `/usr/bin/firefox` 为 `env MOZ_DISABLE_RDD_SANDBOX=1 firefox` 
+
+启动 Firefox, 进入 `about:config`.
+
+设定 `gfx.webrender.all` `media.ffmpeg.vaapi.enabled` `MOZ_X11_EGL=1` 为 `True`
+
+## Wayland
+
+### Chrome
+
+<u>**Warning:** Disabling the rendering blacklist may cause unstable behavior, including crashes of the host. See the bug reports in `chrome://gpu` for details.</u>
+
+编辑 `~/.config/chrome-flags.conf`
+
+添加以下内容
+
+```~/.config/chrome-flags.conf
+--ignore-gpu-blocklist
+--enable-gpu-rasterization
+--enable-zero-copy
+--disable-features=UseChromeOSDirectVideoDecoder
+--enable-features=VaapiVideoDecoder
+```
+
+
+
+### Firefox
+
+编辑 `/usr/share/Applications/firefox.desktop`
+
+全局替换 `/usr/bin/firefox` 为 `env MOZ_DISABLE_RDD_SANDBOX=1 MOZ_ENABLE_WAYLAND=1 firefox` 
+
+启动 Firefox, 进入 `about:config`.
+
+设定 `gfx.webrender.all` `media.ffmpeg.vaapi.enabled`  为 `True`
+
+### macOS
+
+#### Safari
+
+应当开箱即用
+
+#### Chrome
+
+打开 `chrome://flags`
+
+设定 `canvas-oop-rasterization`为 `True`
